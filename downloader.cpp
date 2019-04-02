@@ -33,7 +33,7 @@ int main(void){
     fclose(f);
     system("del out.o");
 
-    if(strcmp(s, "usage:")){ // if git not installed in this computer,
+    if(strcmp(s, "wget:")){ // if git not installed in this computer,
         cout << "downloader>> wget을 찾을 수 없습니다." << endl;
         cout << "downloader>> 같은 디렉토리에 wget이 있는지 확인해주세요." << endl;
         Sleep(3000);
@@ -44,7 +44,7 @@ int main(void){
         }
         return 0;
     }
-    
+
     cout << "downloader>> 업데이트 서버에 접속하는 중입니다..." << endl;
     system("wget.exe https://habitat.factoryal.com/devsign/2019-C/updater.exe");
 
