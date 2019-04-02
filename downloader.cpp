@@ -24,16 +24,16 @@ int main(void){
     cout << "<<< DEVSIGN 2019 C 과제 다운로더 >>>" << endl << endl;
 
     // check if wget installed or not
-    int returnCode = system(".\\wget.exe > out.o");
+    int returnCode = system(".\\wget.exe --help > out.txt");
 
-    FILE* f = fopen(".\\out.o", "r");
+    FILE* f = fopen(".\\out.txt", "r");
     char s[10];
     fscanf(f, "%s", s);
 
     fclose(f);
-    system("del out.o");
+    system("del out.txt");
 
-    if(strcmp(s, "wget:")){ // if git not installed in this computer,
+    if(strcmp(s, "GNU")){ // if wget not exists in this working directory,
         cout << "downloader>> wget을 찾을 수 없습니다." << endl;
         cout << "downloader>> 같은 디렉토리에 wget이 있는지 확인해주세요." << endl;
         Sleep(3000);
